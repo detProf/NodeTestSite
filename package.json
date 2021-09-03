@@ -1,0 +1,29 @@
+{
+  "name": "challenge-api",
+  "version": "1.0.0",
+  "description": "User Endpoint Challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devstart": "nodemon index.js",
+    "serverstart": "DEBUG=challenge-api:* npm run devstart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GhostGroup/challenge-api-detprof.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GhostGroup/challenge-api-detprof/issues"
+  },
+  "homepage": "https://github.com/GhostGroup/challenge-api-detprof#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7"
+  }
+}

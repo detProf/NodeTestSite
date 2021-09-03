@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Index</title>
+</head>
+
+<body>
+    <!-- okayish -->
+    <form name="getUsersForm" method="GET" action="/user">
+        <h2>Retrieve Users:</h2>
+        <TABLE BORDER="1">
+            <tr>
+                <div>
+                    <label>
+                        <input type="submit" name="btn_get_user" id="btn_get_user" value="Get All Users" />
+                    </label>
+                </div>
+            </tr>
+        </TABLE>
+    </form>
+
+    <!-- okayish -->
+    <form name="getUserForm" method="GET" action="/user"
+        onsubmit="location.href = this.action + '/' + this.username.value; return false;">
+        <h2>Retrieve a User:</h2>
+        <TABLE BORDER="1">
+            <tr>
+                <div>
+                    <label>Username:
+                        <input type="text" name="username" id="username" />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="submit" name="btn_get_user" id="btn_get_user" value="Get A User" />
+                    </label>
+                </div>
+            </tr>
+        </TABLE>
+    </form>
+
+    <form method="POST" action="/user" enctype="multipart/form-data">
+        <h2>Add a user:</h2>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                <input type="text" name="firstName" />
+            </td>
+            <td>
+                Last Name:
+            </td>
+            <td><input type="text" name="lastName" /></td>
+            <td>
+                Birthday:
+            </td>
+            <td><input type="date" name="birthDate" /></td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Email Address:
+            </td>
+            <td> <input type="text" name="email" /></td>
+            <td>
+                Username:
+            </td>
+            <td> <input type="text" name="username" /></td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Medical Rec. #:
+            </td>
+            <td><input type="text" name="medRecInfo_number" /></td>
+            <td>
+                Medical Rec. Issuer:
+            </td>
+            <td> <input type="text" name="medRecInfo_issuer" /></td>
+            <td>
+                Medical Rec. State or Province:
+            </td>
+            <td><input type="text" name="medRecInfo_stateProvince" /></td>
+            <td>
+                Medical Rec. Expiration:
+            </td>
+            <td><input type="date" name="medRecInfo_expiration" /></td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Govt. Issued ID Number:
+            </td>
+            <td><input type="text" name="idInfo_number" /></td>
+            <td>
+                ID State, Province, or Country:
+            </td>
+            <td><input type="text" name="idInfo_stateProvince" /></td>
+            <td>
+                ID Expiration:
+            </td>
+            <td><input type="date" name="idInfo_expiration" /></td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label>Picture of current ID:</label>
+                <input type="file" name="id_pic" />
+            </td>
+            <td>
+                <label>Current medical recommendation picture:</label>
+                <input type="file" name="rec_pic" />
+            </td>
+        </tr>
+        <div>
+            <input type="submit" name="btn_upload_id" value="Add" multiple />
+        </div>
+    </form>
+
+    <!-- okayish -->
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <h2>Update ID:</h2>
+        <tr>
+            <td>
+                Username:
+            </td>
+            <td> <input type="text" name="username" /></td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Govt. Issued ID Number:
+            </td>
+            <td><input type="text" name="idInfo_number" /></td>
+            <td>
+                ID State, Province, or Country:
+            </td>
+            <td><input type="text" name="idInfo_stateProvince" /></td>
+            <td>
+                ID Expiration:
+            </td>
+            <td><input type="date" name="idInfo_expiration" /></td>
+            <label>Select your ID picture:</label>
+            <input type="file" name="id_pic" />
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Medical Rec. #:
+            </td>
+            <td><input type="text" name="medRecInfo_number" /></td>
+            <td>
+                Medical Rec. Issuer:
+            </td>
+            <td> <input type="text" name="medRecInfo_issuer" /></td>
+            <td>
+                Medical Rec. State or Province:
+            </td>
+            <td><input type="text" name="medRecInfo_stateProvince" /></td>
+            <td>
+                Medical Rec. Expiration:
+            </td>
+            <td><input type="date" name="medRecInfo_expiration" /></td>
+            <td>
+                <label>Select your medical recommendation picture:</label>
+                <input type="file" name="rec_pic" />
+            </td>
+        </tr>
+        <div>
+            <input type="submit" name="btn_upload_id" value="Update" multiple />
+        </div>
+    </form>
+
+</body>
+
+</html>
